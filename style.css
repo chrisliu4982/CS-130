@@ -1,21 +1,48 @@
 /* You're welcome to change any of this! */
 * {
     box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+ 
+header {
+    background-color: rgb(57, 82, 224);
+    color: white;
+    text-align: center;
+    border-bottom: solid 2px;
+    border-color: black ;
 }
 
 body {
-    margin: 0px;
-    font-family: Arial, sans-serif;
+    margin: 0px;    
 }
 header, section {
     padding: 20px;
 }
+
+section {
+    min-height: 100vh;
+}
+h2 {
+    margin-left: 1em;
+}
+
+#tutorials, #homework {
+    border-right: solid 2px;
+    border-color:black;
+}
+
+
 p, li {
     line-height: 1.5em;
 }
 
-#inspiration {
-    background-color: #F0F0F0;
-    padding-top: 40px;
-    padding-bottom: 40px;
+ul {
+    margin-left: 1em;
 }
