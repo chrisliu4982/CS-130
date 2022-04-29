@@ -17,7 +17,9 @@ a, a:hover, a:visited, a:active {
 aside, footer, header, nav, section, article {
     display: flex;
     flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
 }
+
 body {
     overflow: hidden;
     margin: 0px;
@@ -32,12 +34,14 @@ body {
 aside {
     background-color: #000;
     grid-area: left;
+    padding-left: 2em;
 }
 header {
     background: #111;
     position: fixed;
     width: calc(100vw - 250px);
     left: 250px;
+    padding-left: 2em;
 }
 
 main {
@@ -83,15 +87,88 @@ footer {
 /* Your Code Here */
 
 
+#sidebar h1{
+    margin-bottom: 1.5em;
+    margin-top: 1em;
+}
+
+#sidebar a{
+    color: lightgray;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+#sidebar a:hover{
+    border-left: solid 2px #1DB954;
+    color: white;
+}
+
+#sidebar .selected{
+    border-left: solid 2px #1DB954;
+}
+
+#sidebar #home, #search, #library{
+    margin-right: 10px;
+}
+
 
 /********************************/
 /* Part B: Header & Nav Styling */
 /********************************/
 
 /* Your Code Here */
+header {
+    flex-direction: row-reverse;
+    background: transparent;
+    margin-top: 1.5em;
+}
 
+header #profile{
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 35px;
+    background-color: #696969;
+    border: solid 1px #696969;
+    border-radius: 20px;
+}
 
+header #upgrade{
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 25px;
+    border: solid 1px white;
+    border-radius: 20px;
+}
 
+header #profile:hover{
+    background-color: gray;
+}
+
+header #upgrade:hover{
+    background-color: gray;
+}
+
+nav {
+    flex-direction: row;
+
+    margin-bottom: 1em;
+}
+
+nav a{
+    margin-left: 2em;
+}
+
+nav .selected{
+    border-bottom: solid 2px #1DB954;
+}
+
+nav a:hover{
+    border-bottom: solid 2px #1DB954;
+}
 
 
 /*************************/
@@ -99,7 +176,59 @@ footer {
 /*************************/
 
 /* Your Code Here */
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 20px;
+}
 
+.artist-card {
+    margin: 10px;
+    width: 15em;
+    height: 22.5em;
+    border-radius: 10px;
+    background-color: #222;
+    padding-bottom: 10vh;
+    text-align: center;
+}
+
+.artist-card .card-footer div{
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: left;
+
+}
+
+.artist-card .card-footer h2{
+    margin-bottom: 5px;
+    font-size: 20px;
+    padding-right: 0px;
+
+}
+
+
+.card-footer p{
+    color: gray;
+    margin-top: 0px;
+    padding-right: 0px;
+
+}
+
+section img {
+    width: 80%;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    margin-top: 2.5vw;
+    border-radius: 10em;
+}
+
+.artist-card button{
+    margin-left: 9em;
+    border: solid 1px #1DB954;
+    padding: 15px;
+    background-color: #1DB954;
+    border-radius: 50%;
+}
 
 
 
@@ -109,4 +238,35 @@ footer {
 
 /* Your Code Here */
 
+/*tablet*/
+@media (max-width: 1024px) {
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+/*phone*/
+@media (max-width: 600px) {
+    #container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 100px;
+        grid-template-areas:
+        "main"
+        "bottom"
+    }
+
+    aside{
+        display: none;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+}
 
