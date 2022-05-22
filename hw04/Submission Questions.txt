@@ -1,0 +1,5 @@
+What corrections did you have to make, and how did you make them?
+    added alt text for images that were generated. added aria-label for search bar. set language for the html. 
+Is this interface functional without the use of a mouse (i.e., just using keyboard keys)? Why or why not?
+    Most features are able to be used without a mouse. You can search and navigate through search results with just keyboard.
+    However, I was unable find the key to pause the song previews. 
